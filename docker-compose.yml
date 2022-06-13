@@ -1,0 +1,17 @@
+services:
+  neo4j:
+    build:
+      context: .
+      dockerfile: neo4j.Dockerfile
+    ports:
+      - "7687:7687"
+      - "7474:7474"
+    volumes:
+    - $HOME/neo4j/logs:/logs
+
+  web:
+    build:
+      context: .
+      dockerfile: web.Dockerfile
+    ports:
+      - "3030:3030"

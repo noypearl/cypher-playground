@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const neo4j = require('neo4j-driver').default
 const driver = neo4j.driver(uri, neo4j.auth.basic(user, password), {encrypted: 'ENCRYPTION_OFF'});
-global.session = driver.session({'database': database});
+global.session = driver.session();
+// global.session = driver.session({'database': database});
 
 
 app.use(morgan('combined'))
