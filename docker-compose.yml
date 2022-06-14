@@ -10,6 +10,8 @@ services:
     - $HOME/neo4j/logs:/logs
 
   web:
+    links:
+      - neo4j
     build:
       context: .
       dockerfile: web.Dockerfile
