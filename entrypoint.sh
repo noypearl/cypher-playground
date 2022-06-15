@@ -14,5 +14,12 @@ while ! changePassword; do
     echo '.'
 done
 
-echo noy
+# load spongebob db
+neo4j-admin load --from=/var/app/spongebob-db.dump --database=spongebob
+
+# create database to use after load
+cypher-shell -u $NEO4J_USER -p $NEO4J_PASS "CREATE DATABASE spongebob"
+
+sleep 5
+echo START!
 tail -f /dev/null

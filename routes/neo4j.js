@@ -36,7 +36,7 @@ router.post('/places', async (req, res, next ) => {
 })
 
 router.get('/characters', async (req, res) => {
-    res.send(await executeQuery('MATCH (p:Place) return p'))
+    res.send(await executeQuery('MATCH (c:Character) return c'))
 })
 
 router.get('/characters/id/:id', async (req, res) => {
