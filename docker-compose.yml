@@ -9,11 +9,29 @@ services:
     volumes:
     - $HOME/neo4j/logs:/logs
 
+  redisgraph:
+    image: redislabs/redisgraph:2.8.13
+    ports:
+      - "6379:6379"
+
   web:
+    depends_on:
+      - neo4j
+      - redisgraph
     links:
       - neo4j
+      - redisgraph
     build:
       context: .
       dockerfile: web.Dockerfile
     ports:
       - "3030:3030"
+#
+#  swagger:
+#    image: swaggerapi/swagger-ui
+#    ports:
+#      - "80:8080"
+#    environment:
+#      - SWAGGER_JSON=/swagger.json
+#    volumes:
+#    - ./swagger/swagger.json:/var/app/swagger/swagger.json

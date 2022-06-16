@@ -1,6 +1,16 @@
 {
-    "uri": "bolt://neo4j:7687",
-    "user": "neo4j",
-    "password": "hello",
-    "database": "spongebob"
+    "neo4j": {
+        "uri": "bolt://neo4j:7687",
+        "user": "neo4j",
+        "password": "hello",
+        "database": "spongebob"
+    },
+    "redisgraph": {
+        "host": "redisgraph",
+        "port": 6379
+    },
+    "app": {
+        "port": 3030
+    }
 }
+

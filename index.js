@@ -2,42 +2,34 @@ const express = require('express')
 const app = express()
 const path = require('path');
 const morgan = require('morgan');
-const indexRouter = require('./routes')
 const bodyParser = require('body-parser')
-
-const {
-    uri,
-    user,
-    password,
-    database,
-} = require('./config.json')
-
-const PORT = 3030
+const indexRouter = require('./routes')
+const connection = require('./connection')
+const { neo4j:neo4j_config, redisgraph:redisgraph_config, app:app_config } = require('./config.json')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-const neo4j = require('neo4j-driver').default
-const driver = neo4j.driver(uri, neo4j.auth.basic(user, password), {encrypted: 'ENCRYPTION_OFF'});
-// global.session = driver.session();
-global.session = driver.session({'database': database});
-
-
 app.use(morgan('combined'))
+
 app.use('/health', ((req, res) => {
-    res.send("Up and running!")
+    res.send("Let's GOO! #1337")
 }))
+
+console.log("Initializing database connection")
+connection.neo4j(neo4j_config.uri,neo4j_config.username, neo4j_config.password, neo4j_config.database, neo4j_config.port)
+connection.redisgraph(redisgraph_config.host, redisgraph_config.port)
 
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use('/api', indexRouter)
 
+
 //TODO - fix error handler to actually be error handler
 app.use((err, req, res, next) => {
-    console.error(err.stack)
+    console.error(err.body)
     res.status(404
     ).send(`Error: ${err}`)
 })
 
-console.log(`[x] Server up and running on http://localhost:${PORT}`)
-app.listen(PORT)
+console.log(`[x] Server up and running on http://localhost:${app_config.port}`)
+app.listen(app_config.port)
 

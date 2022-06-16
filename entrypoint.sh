@@ -21,5 +21,5 @@ neo4j-admin load --from=/var/app/spongebob-db.dump --database=spongebob
 cypher-shell -u $NEO4J_USER -p $NEO4J_PASS "CREATE DATABASE spongebob"
 
 sleep 5
-echo START!
+echo neo4j database is ready!
 tail -f /dev/null
