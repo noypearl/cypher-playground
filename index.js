@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const indexRouter = require('./routes')
 const connection = require('./connection')
-const { neo4j:neo4j_config, redisgraph:redisgraph_config, app:app_config } = require('./config.json')
+const { redisgraph:redisgraph_config, app:app_config } = require('./config.json')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,8 +16,7 @@ app.use('/health', ((req, res) => {
 }))
 
 console.log("Initializing database connection")
-connection.neo4j(neo4j_config.uri,neo4j_config.username, neo4j_config.password, neo4j_config.database, neo4j_config.port)
-connection.redisgraph(redisgraph_config.host, redisgraph_config.port)
+redisGraphSession = connection.redisgraph(redisgraph_config.host, redisgraph_config.port)
 
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use('/api', indexRouter)

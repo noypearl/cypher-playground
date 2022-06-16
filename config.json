@@ -1,7 +1,7 @@
 {
     "neo4j": {
         "uri": "bolt://neo4j:7687",
-        "user": "neo4j",
+        "username": "neo4j",
         "password": "hello",
         "database": "spongebob"
     },

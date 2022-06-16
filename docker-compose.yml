@@ -15,15 +15,15 @@ services:
       - "6379:6379"
 
   web:
+    build:
+      context: .
+      dockerfile: web.Dockerfile
     depends_on:
       - neo4j
       - redisgraph
     links:
       - neo4j
       - redisgraph
-    build:
-      context: .
-      dockerfile: web.Dockerfile
     ports:
       - "3030:3030"
 #

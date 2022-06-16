@@ -15,6 +15,7 @@ while ! changePassword; do
 done
 
 # load spongebob db
+echo starting to load neo4j database dump data
 neo4j-admin load --from=/var/app/spongebob-db.dump --database=spongebob
 
 # create database to use after load

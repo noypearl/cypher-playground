@@ -1,4 +1,5 @@
 const Redis = require("ioredis");
+const neo4j = require("neo4j-driver").default;
 
 module.exports = {
     redisgraph: (host, port) => {
@@ -39,10 +40,10 @@ module.exports = {
 
     },
     neo4j: (uri,username,password, database) => {
-        console.log(`Connecting to neo4j ${database} database at ${uri}}`)
-        const neo4j = require('neo4j-driver').default
+        // console.log(`Connecting to neo4j ${database} database at ${uri}}`)
+        console.log(`Connecting to neo4j ${uri} ${username} ${password} ${database}`)
         const driver = neo4j.driver(uri, neo4j.auth.basic(username, password), {encrypted: 'ENCRYPTION_OFF'});
-        global.session = driver.session({'database': database});
+        return driver.session({'database': database});
 
     }
 }

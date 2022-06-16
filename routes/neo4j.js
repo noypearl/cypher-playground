@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const { neo4j:neo4jConfig } = require('../config.json')
+const connection = require('../connection')
+
+neo4jSession = connection.neo4j(neo4jConfig.uri,neo4jConfig.username, neo4jConfig.password, neo4jConfig.database, neo4jConfig.port)
 
 const executeQuery = async (query, params) => {
     let result = ''
     try {
         // TODO - make try / catch nicer - consult w/ Mev
-        result = await session.run(query, params);
+        result = await neo4jSession.run(query, params);
         result = result.records
     } catch (e) {
         result = e.toString()
