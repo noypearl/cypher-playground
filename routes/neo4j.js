@@ -21,6 +21,9 @@ const executeQuery = async (query, params) => {
 //Run arbitrary query - TRY IT OUT! :)
 router.post('/raw', async (req, res) => {
     const query = req.body.query
+    if(!query) {
+        return next("No query was provided")
+    }
     res.send(await executeQuery(query))
 })
 
