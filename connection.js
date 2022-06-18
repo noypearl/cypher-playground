@@ -25,23 +25,11 @@ module.exports = {
         redis.get("mykey").then((result) => {
             console.log(result); // Prints "value"
         });
-
-        redis.zadd("sortedSet", 1, "one", 2, "dos", 4, "quatro", 3, "three");
-        redis.zrange("sortedSet", 0, 2, "WITHSCORES").then((elements) => {
-            // ["one", "1", "dos", "2", "three", "3"] as if the command was `redis> ZRANGE sortedSet 0 2 WITHSCORES`
-            console.log(elements);
-        });
-
-// All arguments are passed directly to the redis server,
-// so technically ioredis supports all Redis commands.
-// The format is: redis[SOME_REDIS_COMMAND_IN_LOWERCASE](ARGUMENTS_ARE_JOINED_INTO_COMMAND_STRING)
-// so the following statement is equivalent to the CLI: `redis> SET mykey hello EX 10`
-        redis.set("mykey", "hello", "EX", 10);
-
+        return redis
     },
     neo4j: (uri,username,password, database) => {
         // console.log(`Connecting to neo4j ${database} database at ${uri}}`)
-        console.log(`Connecting to neo4j ${uri} ${username} ${password} ${database}`)
+        console.log(`Connecting to neo4j ${database} database at ${uri}  `)
         const driver = neo4j.driver(uri, neo4j.auth.basic(username, password), {encrypted: 'ENCRYPTION_OFF'});
         return driver.session({'database': database});
 

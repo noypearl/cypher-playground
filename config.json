@@ -6,7 +6,7 @@
         "database": "spongebob"
     },
     "redisgraph": {
-        "host": "redisgraph",
+        "host": "127.0.0.1",
         "port": 6379
     },
     "app": {

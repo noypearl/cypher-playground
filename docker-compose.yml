@@ -13,6 +13,8 @@ services:
     image: redislabs/redisgraph:2.8.13
     ports:
       - "6379:6379"
+    volumes:
+      - ./redis-data:/data
 
   web:
     build:

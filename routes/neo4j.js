@@ -5,6 +5,7 @@ const connection = require('../connection')
 
 neo4jSession = connection.neo4j(neo4jConfig.uri,neo4jConfig.username, neo4jConfig.password, neo4jConfig.database, neo4jConfig.port)
 
+//TODO - remove params (unused)
 const executeQuery = async (query, params) => {
     let result = ''
     try {
