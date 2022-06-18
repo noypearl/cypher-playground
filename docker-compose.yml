@@ -29,11 +29,11 @@ services:
     ports:
       - "3030:3030"
 #
-#  swagger:
-#    image: swaggerapi/swagger-ui
-#    ports:
-#      - "80:8080"
-#    environment:
-#      - SWAGGER_JSON=/swagger.json
-#    volumes:
-#    - ./swagger/swagger.json:/var/app/swagger/swagger.json
+  swagger:
+    image: swaggerapi/swagger-ui
+    ports:
+      - "8888:8080"
+    environment:
+      - SWAGGER_JSON=/var/app/swagger/swagger.yaml
+    volumes:
+    - ./swagger:/var/app/swagger

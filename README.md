@@ -19,6 +19,13 @@ docker huetueot
 ```
 The app will run at localhost:3030
 
+### Browser the Swagger
+Try it! http://localhost:8888
+
+### Download the Postman collection
+
+TODO - add here
+
 ### Send API requests
 Action | Path | Description 
 --- | --- | ---  
@@ -43,11 +50,13 @@ Try to find an injection. Hint: URL encode your query params. :)
 
 ## Debugging & solutions to annoying problems
 #### Redis Graph starts without default data!
-You might have to enable your directory to be discoverable by Docker volumes. 
-See https://docs.docker.com/desktop/mac/#file-sharing 
+- You might have to enable your directory to be discoverable by Docker volumes. 
+See https://docs.docker.com/desktop/mac/#file-sharing
+- Verify if that's the issue by accessing the swagger at http://locallhost:8888. Couldn't access it? Probable it's the same volume issue. See docker's link above. 
 
 #### The injection doesn't work for me! I get a weird error!
 Remember to URL encode your parameter since it's a URL param.
+
 
 ## Credits
 This app is based on [this open source project I found](https://github.com/morkin1792/CIWA)

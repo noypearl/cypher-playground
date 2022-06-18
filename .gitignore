@@ -1,12 +1,12 @@
 .DS_Store
 node_modules
 package-lock.json
-redis/
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
-
+logs
+redis-data/dump.rdb
 .idea/**/gradle.xml
 .idea/**/libraries
 
