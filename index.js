@@ -25,6 +25,6 @@ app.use((err, req, res, next) => {
     ).send(`Error: ${err}`)
 })
 
-console.log(`[x] Server up and running on ${app_config.host}:${app_config.port}`)
+console.log(`[x] Server up and running at ${app_config.host}:${app_config.port}`)
 app.listen(app_config.port)
 
