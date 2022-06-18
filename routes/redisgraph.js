@@ -9,11 +9,9 @@ const executeQuery = async (query) => {
     let result = ''
     try {
         // TODO - make try / catch nicer - consult w/ Mev
-        // result = await redisSession.call(`${predefinedCypher}${query}"`);
         // TODO - promisfy this or add catch or some error printing
         // TODO - convert the toString to more beautiful json
         result = await redisSession.call('GRAPH.QUERY', 'spongebob', query)
-        // result = await redisSession.call('GRAPH.QUERY', 'spongebob', "MATCH (p:Character{name:'Spongebob'}) RETURN p")
         if(result){
             result = result[1].toString()
             return result
@@ -32,6 +30,9 @@ const executeQuery = async (query) => {
 //Run arbitrary query - TRY IT OUT! :)
 router.post('/raw', async (req, res) => {
     const query = req.body.query
+    if(!query) {
+        return next("No query was provided")
+    }
     res.send(await executeQuery(query))
 })
 

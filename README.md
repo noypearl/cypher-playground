@@ -41,6 +41,14 @@ Try to find an injection. Hint: URL encode your query params. :)
 - There's a postman collection of the REST api
 - You can either explore Neo4J or RedisGraph
 
+## Debugging & solutions to annoying problems
+#### Redis Graph starts without default data!
+You might have to enable your directory to be discoverable by Docker volumes. 
+See https://docs.docker.com/desktop/mac/#file-sharing 
+
+#### The injection doesn't work for me! I get a weird error!
+Remember to URL encode your parameter since it's a URL param.
+
 ## Credits
 This app is based on [this open source project I found](https://github.com/morkin1792/CIWA)
 
