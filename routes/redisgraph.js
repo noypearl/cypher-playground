@@ -10,10 +10,9 @@ const executeQuery = async (query) => {
     try {
         // TODO - make try / catch nicer - consult w/ Mev
         // TODO - promisfy this or add catch or some error printing
-        // TODO - convert the toString to more beautiful json
         result = await redisSession.call('GRAPH.QUERY', 'spongebob', query)
         if(result){
-            result = result[1].toString()
+            result = result[1]
             return result
         }
         else{
