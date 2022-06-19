@@ -31,37 +31,38 @@ docker-compose up
 ```
 docker-compose up web neo4j redisgraph swagger
 ```
-The app will run at http://localhost:3030
-
+The web app will run at http://localhost:3030 and will listen to your HTTP requests.
+<br> 
+See your logs for more information.
 ### Browse the Swagger
 Try it! http://localhost:8888
 
-### Add the Postman collections 
-
-[RedisGraph](https://github.com/noypearl/cypher-playground/postman/redisgraph-spongebob.postman_collection)
-[Neo4J](https://github.com/noypearl/cypher-playground/postman/neo4j-spongebob.postman_collection)
+### Add & use custom Postman collections 
+##### These are the collections of the REST api
+- [RedisGraph-postman](https://github.com/noypearl/cypher-playground/postman/redisgraph-spongebob.postman_collection) 
+<br>
+- [Neo4J-postman](https://github.com/noypearl/cypher-playground/postman/neo4j-spongebob.postman_collection)
 
 ### Send API requests
+{DB} =  neo4j/redisgraph
+
 Action | Path | Description 
 --- | --- | ---  
-GET | /api/neo4j/ | get secret
-GET | /api/neo4j/characters | get all characters
-GET | /api/neo4j/characters/name/:name | get character by name
-GET | /api/neo4j/characters | get all characters
-GET | /api/neo4j/characters | get all characters
-GET | /api/neo4j/characters | get all characters
-GET | /api/neo4j/characters | get all characters
-GET | /api/neo4j/characters | get all characters
-GET | /api/neo4j/characters | get all characters
-
+GET | /api/{DB}/internal-api/keys.txt | get secret
+GET | /api/{DB}/characters | get all characters
+GET | /api/{DB}/characters/name/:name | get character by name
+GET | /api/{DB}/characters/id/:id | get character by id
+GET | /api/{DB}/all | get all data
+POST | /api/{DB}/characters | create new character
+POST | /api/{DB}/places | create new place
+POST | /api/{DB}/raw | run arbitrary query
+DELETE | /api/{DB}/characters/id | delete character by id
+DELETE | /api/{DB}/places/id | delete place by id
 
 ### Inject
-Try to find an injection. Hint: URL encode your query params. :)
-
-
-## What Else?
-- There's a postman collection of the REST api
-- You can either explore Neo4J or RedisGraph
+Try to find an injection. 
+<br> 
+**Hint: URL encode your query params. 2nd Hint: See postman collections :)**
 
 ## Debugging & solutions to annoying problems
 #### Redis Graph starts without default data!
@@ -76,14 +77,5 @@ Remember to URL encode your parameter since it's a URL param.
 ## Credits
 This app is based on [this open source project I found](https://github.com/morkin1792/CIWA)
 
-
-TODO - change dis
-
-
-add Postman collectino
-Add neo4j references
-Add presentation BSides link
-
-Add table of  api requests
-
-Add docker start & build instructions
+## More
+This app is a playground for the research I presented [here](https://bsidestlv.com/agenda/cypher_query_injection___the_new__sql_injection__we_aren_t_aware_of/)
