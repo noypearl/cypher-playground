@@ -8,17 +8,14 @@ const redisSession = connection.redisgraph(redisgraphConfig.host, redisgraphConf
 const executeQuery = async (query) => {
     let result = ''
     try {
-        // TODO - make try / catch nicer - consult w/ Mev
-        // TODO - promisfy this or add catch or some error printing
         result = await redisSession.call('GRAPH.QUERY', 'spongebob', query)
         if(result){
             result = result[1]
             return result
         }
         else{
-            throw "Error executing redisgraph query"
+            console.log("No results from redisGraph query")
         }
-        console.log(result)
     } catch (e) {
         result = e.toString()
         return result

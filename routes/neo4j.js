@@ -5,12 +5,10 @@ const connection = require('../connection')
 
 neo4jSession = connection.neo4j(neo4jConfig.uri,neo4jConfig.username, neo4jConfig.password, neo4jConfig.database, neo4jConfig.port)
 
-//TODO - remove params (unused)
-const executeQuery = async (query, params) => {
+const executeQuery = async (query) => {
     let result = ''
     try {
-        // TODO - make try / catch nicer - consult w/ Mev
-        result = await neo4jSession.run(query, params);
+        result = await neo4jSession.run(query);
         result = result.records
     } catch (e) {
         result = e.toString()
