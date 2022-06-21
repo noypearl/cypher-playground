@@ -1,0 +1,30 @@
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home::before {
+    content: "";
+    background-image: url('home_background.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.55;
+}
+
+h1 {
+    font-family: "Roboto";
+    position: relative;
+    color: #ffffff;
+    -webkit-text-stroke: 8px black;
+    font-size: 10rem;
+    line-height: 1.1;
+    text-align: center;
+}

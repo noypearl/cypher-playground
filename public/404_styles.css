@@ -9,7 +9,7 @@
 
 .home::before {
     content: "";
-    background-image: url('background.png');
+    background-image: url('404_background.jpeg');
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -24,7 +24,13 @@ h1 {
     position: relative;
     color: #ffffff;
     -webkit-text-stroke: 8px black;
-    font-size: 10rem;
+    font-size: 7rem;
     line-height: 1.1;
     text-align: center;
+    margin-bottom: 30%;
+}
+
+a{
+    color: white;
+    -webkit-text-stroke: 5px black;
 }
