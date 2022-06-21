@@ -20,6 +20,11 @@ A spongebob-themed vulnerable web app for learning Cypher Query Injection.
 - To protect against those injections in your apps
 - To profit.
 
+## Screenshots
+![homepage](/screenshots/homepage.png?raw=true)
+![error](/screenshots/404.png?raw=true)
+![swagger](/screenshots/swagger.png?raw=true)
+
 ## How
 ### Build & run all 
 ```
