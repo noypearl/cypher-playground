@@ -1,176 +1,14 @@
 openapi: 3.0.0
 info:
-  title: 'spongebob API'
+  title: Spongebob API
   version: 1.0.0
 servers:
-  - url: http://{{server_url}}
+  - url: http://localhost:3030
 paths:
-  /api/redisgraph/internal-api/keys.txt:
+  /api/neo4j/internal-api/keys.txt:
     get:
       tags:
-        - default
-      summary: get secret
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/characters:
-    get:
-      tags:
-        - default
-      summary: Get all characters
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    post:
-      tags:
-        - default
-      summary: Create new character
-      requestBody:
-        content:
-          application/x-www-form-urlencoded:
-            schema:
-              properties:
-                name:
-                  type: string
-                  example: Patrick
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/places:
-    post:
-      tags:
-        - default
-      summary: Create new place
-      requestBody:
-        content:
-          application/x-www-form-urlencoded:
-            schema:
-              properties:
-                name:
-                  type: string
-                  example: Rock Bottom
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    get:
-      tags:
-        - default
-      summary: Get all places
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/characters/id/4:
-    delete:
-      tags:
-        - default
-      summary: DELETE character by id
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/neo4j/places/id/7:
-    delete:
-      tags:
-        - default
-      summary: DELETE place by id
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/raw:
-    post:
-      tags:
-        - default
-      summary: Run arbitrary query
-      requestBody:
-        content:
-          application/x-www-form-urlencoded:
-            schema:
-              properties:
-                query:
-                  type: string
-                  example: MATCH (p:Place) RETURN p
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/characters/name/Patrick:
-    get:
-      tags:
-        - default
-      summary: Get character by name
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/characters/name/Squidward' OR 1=1  return c//:
-    get:
-      tags:
-        - default
-      summary: 'Bonus: Injection get all characters'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/all:
-    get:
-      tags:
-        - default
-      summary: Get all data
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/places/name/Chum Bucket:
-    get:
-      tags:
-        - default
-      summary: Get place by name
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/characters/id/3:
-    get:
-      tags:
-        - default
-      summary: Get character by id
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/redisgraph/places/id/7:
-    get:
-      tags:
-        - default
-      summary: Get place by id
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
- /api/neo4j/internal-api/keys.txt:
-    get:
-      tags:
-        - default
+        - Neo4J
       summary: get secret
       responses:
         '200':
@@ -180,7 +18,7 @@ paths:
   /api/neo4j/characters:
     get:
       tags:
-        - default
+        - Neo4J
       summary: Get all characters
       responses:
         '200':
@@ -189,7 +27,7 @@ paths:
             application/json: {}
     post:
       tags:
-        - default
+        - Neo4J
       summary: Create new character
       requestBody:
         content:
@@ -207,7 +45,7 @@ paths:
   /api/neo4j/places:
     post:
       tags:
-        - default
+        - Neo4J
       summary: Create new place
       requestBody:
         content:
@@ -224,28 +62,8 @@ paths:
             application/json: {}
     get:
       tags:
-        - default
+        - Neo4J
       summary: Get all places
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/neo4j/characters/id/18:
-    delete:
-      tags:
-        - default
-      summary: DELETE character by id
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /api/neo4j/places/id/7:
-    delete:
-      tags:
-        - default
-      summary: DELETE place by id
       responses:
         '200':
           description: Successful response
@@ -254,7 +72,7 @@ paths:
   /api/neo4j/raw:
     post:
       tags:
-        - default
+        - Neo4J
       summary: Run arbitrary query
       requestBody:
         content:
@@ -269,10 +87,10 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /api/neo4j/characters/name/Squidward:
+  /api/neo4j/characters/name/{name}:
     get:
       tags:
-        - default
+        - Neo4J
       summary: Get character by name
       responses:
         '200':
@@ -282,48 +100,227 @@ paths:
   /api/neo4j/all:
     get:
       tags:
-        - default
+        - Neo4J
       summary: Get all data
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
-  /api/neo4j/places/name/Chum Bucket:
+  /api/neo4j/places/name/{name}:
     get:
       tags:
-        - default
+        - Neo4J
       summary: Get place by name
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
-  /api/neo4j/characters/id/2:
+  /api/neo4j/characters/id/{id}:
     get:
       tags:
-        - default
+        - Neo4J
       summary: Get character by id
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
-  /api/neo4j/places/id/13:
+      delete:
+        tags:
+          - Neo4J
+        summary: DELETE character by id
+        responses:
+          '200':
+            description: Successful response
+            content:
+              application/json: { }
+  /api/neo4j/places/id/{id}:
     get:
       tags:
-        - default
+        - Neo4J
       summary: Get place by id
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
+    delete:
+      tags:
+        - Neo4J
+      summary: DELETE place by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: { }
   /api/neo4j/characters/name/NONEXIST' OR 1=1  return c//:
     get:
       tags:
-        - default
+        - Neo4J
       summary: 'Bonus: Injection get all characters'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/internal-api/keys.txt:
+    get:
+      tags:
+        - RedisGraph
+      summary: get secret
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/characters:
+    get:
+      tags:
+        - RedisGraph
+      summary: Get all characters
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - RedisGraph
+      summary: Create new character
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Patrick
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/places:
+    post:
+      tags:
+        - RedisGraph
+      summary: Create new place
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Rock Bottom
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - RedisGraph
+      summary: Get all places
+      responses:
+        '200':
+          description: Successful response
+          content:
+#            application/json: {}
+  /api/neo4j/places/id/7:
+    delete:
+      tags:
+        - RedisGraph
+      summary: DELETE place by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/raw:
+    post:
+      tags:
+        - RedisGraph
+      summary: Run arbitrary query
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                query:
+                  type: string
+                  example: MATCH (p:Place) RETURN p
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/characters/name/{name}:
+    get:
+      tags:
+        - RedisGraph
+      summary: Get character by name
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/characters/name/Squidward' OR 1=1  return c//:
+    get:
+      tags:
+        - RedisGraph
+      summary: 'Bonus: Injection get all characters'
+      responses:
+        '200':
+          description: Successful response   
+          content:
+            application/json: {}
+  /api/redisgraph/all:
+    get:
+      tags:
+        - RedisGraph
+      summary: Get all data
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/places/name/{name}:
+    get:
+      tags:
+        - RedisGraph
+      summary: Get place by name
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/redisgraph/characters/id/{id}:
+    get:
+      tags:
+        - RedisGraph
+      summary: Get character by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - RedisGraph
+      summary: DELETE character by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: { }
+  /api/redisgraph/places/id/{id}:
+    get:
+      tags:
+        - RedisGraph
+      summary: Get place by id
       responses:
         '200':
           description: Successful response
