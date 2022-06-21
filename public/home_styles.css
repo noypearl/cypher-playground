@@ -9,7 +9,7 @@
 
 .home::before {
     content: "";
-    background-image: url('home_background.png');
+    background-image: url('/public/home_background.png');
     background-size: cover;
     position: absolute;
     top: 0px;
