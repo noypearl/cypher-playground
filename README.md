@@ -73,6 +73,13 @@ See https://docs.docker.com/desktop/mac/#file-sharing
 #### The injection doesn't work for me! I get a weird error!
 Remember to URL encode your parameter since it's a URL param.
 
+#### Neo4j Connection Errors
+- Did you get `Connection refused` error when trying to start the docker?
+- If so - add the `--force-recreate` flag when you run like this:
+```
+docker-compose up --force-recreate
+``` 
+- Still getting the same issue? Try to clean/flush docker data in your host and run again
 
 ## Credits
 This app is based on [this open source project I found](https://github.com/morkin1792/CIWA)
