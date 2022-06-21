@@ -43,7 +43,7 @@ Try it! http://localhost:8888
 - [Neo4J-postman](https://github.com/noypearl/cypher-playground/postman/neo4j-spongebob.postman_collection)
 
 ### Send API requests
-{DB} =  neo4j/redisgraph
+{DB} - replace with `neo4j` or `redisgraph`
 
 Action | Path | Description 
 --- | --- | ---  
