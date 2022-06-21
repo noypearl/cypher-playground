@@ -1,0 +1,169 @@
+openapi: 3.0.0
+info:
+  title: neo4j-spongebob
+  version: 1.0.0
+servers:
+  - url: http://{{server_url}}
+paths:
+  /api/neo4j/internal-api/keys.txt:
+    get:
+      tags:
+        - default
+      summary: get secret
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/characters:
+    get:
+      tags:
+        - default
+      summary: Get all characters
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - default
+      summary: Create new character
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Squidward
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/places:
+    post:
+      tags:
+        - default
+      summary: Create new place
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Rock Bottom
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - default
+      summary: Get all places
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/characters/id/18:
+    delete:
+      tags:
+        - default
+      summary: DELETE character by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/places/id/7:
+    delete:
+      tags:
+        - default
+      summary: DELETE place by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/raw:
+    post:
+      tags:
+        - default
+      summary: Run arbitrary query
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                query:
+                  type: string
+                  example: MATCH (p:Place) RETURN p
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/characters/name/Squidward:
+    get:
+      tags:
+        - default
+      summary: Get character by name
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/all:
+    get:
+      tags:
+        - default
+      summary: Get all data
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/places/name/Chum Bucket:
+    get:
+      tags:
+        - default
+      summary: Get place by name
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/characters/id/2:
+    get:
+      tags:
+        - default
+      summary: Get character by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/places/id/13:
+    get:
+      tags:
+        - default
+      summary: Get place by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/neo4j/characters/name/NONEXIST' OR 1=1  return c//:
+    get:
+      tags:
+        - default
+      summary: 'Bonus: Injection get all characters'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
