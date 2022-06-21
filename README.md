@@ -4,7 +4,6 @@
 ## What?
 
 A spongebob-themed vulnerable web app for learning Cypher Query Injection.
-TODO - add swagger :) https://metamug.com/util/postman-to-swagger/
 <br>
 
 ## What's here?
