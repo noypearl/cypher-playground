@@ -43,8 +43,8 @@ Try it! http://localhost:8888
 
 ### Add & use custom Postman collections 
 ##### These are the collections of the REST api
-- [RedisGraph-postman](https://github.com/noypearl/cypher-playground/postman/redisgraph-spongebob.postman_collection) 
-- [Neo4J-postman](https://github.com/noypearl/cypher-playground/postman/neo4j-spongebob.postman_collection)
+- [RedisGraph-postman](https://github.com/noypearl/cypher-playground/blob/main/postman/redisgraph-spongebob%20.postman_collection.json) 
+- [Neo4J-postman](https://github.com/noypearl/cypher-playground/blob/main/postman/neo4j-spongebob.postman_collection.json)
 
 ### Send API requests
 {DB} - replace with `neo4j` or `redisgraph`
