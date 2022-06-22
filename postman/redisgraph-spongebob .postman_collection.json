@@ -11,10 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/internal-api/keys.txt",
+					"raw": "http://localhost:3030/api/redisgraph/internal-api/keys.txt",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -31,10 +33,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/characters",
+					"raw": "http://localhost:3030/api/redisgraph/characters",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -54,16 +58,18 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "Patrick",
+							"value": "Plankton",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/characters",
+					"raw": "http://localhost:3030/api/redisgraph/characters",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -89,10 +95,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/places",
+					"raw": "http://localhost:3030/api/redisgraph/places",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -108,10 +116,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/characters/id/4",
+					"raw": "http://localhost:3030/api/redisgraph/characters/id/4",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -129,10 +139,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/places/id/7",
+					"raw": "http://localhost:3030/api/neo4j/places/id/7",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -160,10 +172,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/raw",
+					"raw": "http://localhost:3030/api/redisgraph/raw",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -214,10 +228,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/characters/name/Squidward'%20OR%201%3D1%20%20return%20c%2F%2F",
+					"raw": "http://localhost:3030/api/redisgraph/characters/name/Squidward'%20OR%201%3D1%20%20return%20c%2F%2F",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -235,10 +251,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/all",
+					"raw": "http://localhost:3030/api/redisgraph/all",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -254,10 +272,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/places",
+					"raw": "http://localhost:3030/api/redisgraph/places",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -280,10 +300,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/places/name/Chum Bucket",
+					"raw": "http://localhost:3030/api/redisgraph/places/name/Chum Bucket",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -308,10 +330,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/characters/id/3",
+					"raw": "http://localhost:3030/api/redisgraph/characters/id/3",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",
@@ -336,10 +360,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/redisgraph/places/id/7",
+					"raw": "http://localhost:3030/api/redisgraph/places/id/7",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"redisgraph",

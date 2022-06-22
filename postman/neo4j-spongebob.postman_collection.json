@@ -11,10 +11,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/internal-api/keys.txt",
+					"raw": "localhost:3030/api/neo4j/internal-api/keys.txt",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -31,10 +32,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/characters",
+					"raw": "http://localhost:3030/api/neo4j/characters",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -60,10 +63,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/characters",
+					"raw": "http://localhost:3030/api/neo4j/characters",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -89,10 +94,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/places",
+					"raw": "http://localhost:3030/api/neo4j/places",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -108,16 +115,18 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/characters/id/18",
+					"raw": "http://localhost:3030/api/neo4j/characters/id/4",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
 						"characters",
 						"id",
-						"18"
+						"4"
 					]
 				}
 			},
@@ -129,10 +138,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/places/id/7",
+					"raw": "http://localhost:3030/api/neo4j/places/id/7",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -160,10 +171,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/raw",
+					"raw": "http://localhost:3030/api/neo4j/raw",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -186,10 +199,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/characters/name/Squidward",
+					"raw": "http://localhost:3030/api/neo4j/characters/name/Squidward",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -207,10 +222,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/all",
+					"raw": "http://localhost:3030/api/neo4j/all",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -226,10 +243,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/places",
+					"raw": "http://localhost:3030/api/neo4j/places",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -252,10 +271,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/places/name/Chum Bucket",
+					"raw": "http://localhost:3030/api/neo4j/places/name/Chum Bucket",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -280,10 +301,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/characters/id/2",
+					"raw": "http://localhost:3030/api/neo4j/characters/id/2",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -308,10 +331,12 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/places/id/13",
+					"raw": "http://localhost:3030/api/neo4j/places/id/13",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
@@ -329,10 +354,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER_URL}}/api/neo4j/characters/name/NONEXIST'%20OR%201%3D1%20%20return%20c%2F%2F",
+					"raw": "http://localhost:3030/api/neo4j/characters/name/NONEXIST'%20OR%201%3D1%20%20return%20c%2F%2F",
+					"protocol": "http",
 					"host": [
-						"{{SERVER_URL}}"
+						"localhost"
 					],
+					"port": "3030",
 					"path": [
 						"api",
 						"neo4j",
