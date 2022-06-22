@@ -11,7 +11,7 @@ A spongebob-themed vulnerable web app for learning Cypher Query Injection.
 - Redis Graph database w/ spongebob data
 - Neo4J database w/ spongebob data 
 - Swagger at port http://localhost:8888
-- [Postman collection(s)](https://github.com/noypearl/cypher-playground/postman)
+- [Postman collection(s)](https://github.com/noypearl/cypher-playground/tree/main/postman)
 
 ## Why?
 
