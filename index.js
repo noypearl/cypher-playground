@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const favicon = require('serve-favicon')
 const { path:appRoot } = require('app-root-path');
+const cors = require('cors');
 const indexRouter = require('./routes')
 const { app:app_config } = require('./config.json')
 
@@ -12,7 +13,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(morgan('combined'))
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-
+app.use(cors({
+    origin: 'http://localhost:8888'
+}));
 
 app.use('/health', ((req, res) => {
     res.send("Let's GOO! #1337")
