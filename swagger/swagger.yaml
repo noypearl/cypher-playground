@@ -155,7 +155,7 @@ paths:
           description: Successful response
           content:
             application/json: { }
-  /api/neo4j/characters/name/NONEXIST' OR 1=1  return c//:
+  /api/neo4j/characters/name/NONEXIST'%20OR%201%3D1%20%20return%20c%2F%2Fdocker:
     get:
       tags:
         - Neo4J
@@ -267,14 +267,14 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /api/redisgraph/characters/name/Squidward' OR 1=1  return c//:
+  /api/redisgraph/characters/name/NONEXIST'%20OR%201%3D1%20%20return%20c%2F%2F:
     get:
       tags:
         - RedisGraph
       summary: 'Bonus: Injection get all characters'
       responses:
         '200':
-          description: Successful response   
+          description: Successful response
           content:
             application/json: {}
   /api/redisgraph/all:
