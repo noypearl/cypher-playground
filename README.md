@@ -90,4 +90,4 @@ This app is based on [this open source project I found](https://github.com/morki
 ## More
 This app is a playground for the research I presented [here](https://bsidestlv.com/agenda/cypher_query_injection___the_new__sql_injection__we_aren_t_aware_of/)
 <br>
-You can see the actual slides I made for BSidesTLV 2022 talk [here](https://github.com/noypearl/cypher-playground/blob/main/BsidesTLV_2022_Presentation.pptx)
+You can see the actual slides I made for BSidesTLV 2022 talk [here](https://github.com/noypearl/cypher-playground/blob/main/slides/BsidesTLV_2022_Presentation.pdf)
