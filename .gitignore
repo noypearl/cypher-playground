@@ -6,7 +6,6 @@ package-lock.json
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 logs
-redis-data/dump.rdb
 .idea/**/gradle.xml
 .idea/**/libraries
 
